@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BannerFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00B4FF">
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"/>
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="350dp"
+            android:layout_height="160dp"
+            android:id="@+id/material"
+            app:layout_constraintTop_toBottomOf="@id/image_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="20dp"
+            android:backgroundTint="#218BD5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tarif_ban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFCB04"
+                    android:text="Просто 10"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tarif_ban"
+                    android:layout_marginTop="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/banner_phone"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/icon_thema2"
+                            >
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/phone"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/phone_minut"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10 MIN"
+                            android:textSize="12sp"
+                            android:layout_below="@id/banner_phone"
+                            android:textAlignment="center"
+                            android:layout_centerInParent="true"
+                            android:textColor="#FFCB04"
+                            android:layout_marginTop="6dp"
+                            />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/banner_earth"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/icon_thema2"
+                            >
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/earth"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/internet_mb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10 MB"
+                            android:textSize="12sp"
+                            android:layout_below="@id/banner_earth"
+                            android:textAlignment="center"
+                            android:layout_centerInParent="true"
+                            android:textColor="#FFCB04"
+                            android:layout_marginTop="6dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/banner_sms"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/icon_thema2"
+                            >
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/messagesquare"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/sms_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10 SMS"
+                            android:textSize="12sp"
+                            android:layout_below="@id/banner_sms"
+                            android:textAlignment="center"
+                            android:layout_centerInParent="true"
+                            android:textColor="#FFCB04"
+                            android:layout_marginTop="6dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="14sp"
+                    android:text="10 000 сум в месясц"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#00B4FF"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons"
+            android:layout_width="match_parent"
+            android:layout_height="580dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/banner_home">
+
+            <TextView
+                android:id="@+id/tv_tarif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ta'rif Просто 10"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="#47869B"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/view"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="120dp"
+                />
+
+            <TextView
+                android:id="@+id/abonent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="20dp"
+                android:text="Abonent to'lovi:"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tarif" />
+            <TextView
+                android:id="@+id/tprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:text="10.000 so'm"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tarif" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#E6E6E6"
+                app:layout_constraintTop_toBottomOf="@id/abonent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                />
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:text="«To‘plam» tushunchasi matematikaning ta‘rifsiz qabul qilingan asosiy tushunchalaridan biri bo‘lib, ba‘zi belgilariga asosan birgalikda qaraladigan obyektlar yoki narsalar (predmetlar) majmuasidir. To‘plamni tashkil qiluvchi har bir obyekt yoki narsa uning «elementi» deyiladi. To‘plam tushunchasi misollar yordamida tushuntiriladi. Masalan, Samarqand shahridagi umum ta’lim maktablari, Quyosh sistemasidagi planetalar, barcha natural sonlar, barcha to‘g‘ri kasrlarva hokazolar to‘plamni tashkil etadi."
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_info"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Batafsil"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="30dp"
+        android:backgroundTint="#F1F1F1"
+        android:textColor="#767676"
+        />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_connect"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ulanish"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="30dp"
+            android:backgroundTint="#00B4FF"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="20dp"
+    android:backgroundTint="#218BD5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_tarif_ban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFCB04"
+                android:text="Просто 10"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tarif_ban"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/tv_banner_phone"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_thema2"
+                        >
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/phone"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/phone_minut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 MIN"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tv_banner_phone"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="#FFCB04"
+                        android:layout_marginTop="6dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/tv_banner_earth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_thema2"
+                        >
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/earth"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/internet_mb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 MB"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tv_banner_earth"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="#FFCB04"
+                        android:layout_marginTop="6dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/tv_banner_sms"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_thema2"
+                        >
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/messagesquare"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/sms_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 SMS"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tv_banner_sms"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="#FFCB04"
+                        android:layout_marginTop="6dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="14sp"
+                android:text="10 000 сум в месясц"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="#00B4FF"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+

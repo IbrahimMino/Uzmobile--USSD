@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".minut.MainMinutFragment">
+    <LinearLayout
+        android:id="@+id/toolbar5"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/tabPrimaryColor"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/minut_back"
+            android:layout_width="30dp"
+            android:layout_height="30sp"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minut paketlar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Custom tablayout -->
+    <RelativeLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tabPrimaryColor"
+        android:layout_below="@id/toolbar5"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout5"
+            android:background="@color/tabPrimaryColor"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabTextColor="@color/white"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabSelectedTextColor="@color/tabPrimaryColor"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_minut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minutni tekshir"
+            android:layout_below="@id/tabLayout5"
+            android:backgroundTint="#F8D039"
+            app:cornerRadius="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabContainer"
+        />
+
+</RelativeLayout>

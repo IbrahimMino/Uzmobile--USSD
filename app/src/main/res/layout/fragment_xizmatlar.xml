@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/tabPrimaryColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".xizmatlar.XizmatlarFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbar_xizmat"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/tabPrimaryColor"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/xizmat_back"
+            android:layout_width="30dp"
+            android:layout_height="30sp"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xizmatlar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tabPrimaryColor"
+        android:layout_below="@id/toolbar_xizmat"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp">
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabContainer"
+        android:background="@color/tabPrimaryColor">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView4"
+            android:background="@drawable/bg_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</RelativeLayout>
